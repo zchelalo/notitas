@@ -1,0 +1,20 @@
+meta {
+  name: GET
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{http}}://{{host}}/{{back}}/api/v1/miembros_grupo
+  body: none
+  auth: bearer
+}
+
+query {
+  ~grupo_id: 2
+  ~usuario_id: 1
+}
+
+auth:bearer {
+  token: {{jwt}}
+}

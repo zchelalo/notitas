@@ -1,0 +1,19 @@
+meta {
+  name: PUT
+  type: http
+  seq: 5
+}
+
+put {
+  url: {{http}}://{{host}}/{{back}}/api/v1/grupos/1
+  body: multipartForm
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{jwt}}
+}
+
+body:multipart-form {
+  nombre: Friendsitos
+}

@@ -1,0 +1,24 @@
+meta {
+  name: SEND_CORREO
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{http}}://{{host}}/{{email}}/api/v1/correo
+  body: json
+  auth: none
+}
+
+auth:bearer {
+  token: {{jwt}}
+}
+
+body:json {
+  {
+    "from": "sadkaskd akdd",
+    "to": "eduardosaavedra687@gmail.com",
+    "subject": "safafsa",
+    "html": "aafafasfafaffas"
+  }
+}

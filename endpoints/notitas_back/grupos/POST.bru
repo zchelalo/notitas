@@ -1,0 +1,19 @@
+meta {
+  name: POST
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{http}}://{{host}}/{{back}}/api/v1/grupos
+  body: multipartForm
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{jwt}}
+}
+
+body:multipart-form {
+  nombre: test2
+}

@@ -1,0 +1,15 @@
+meta {
+  name: GET_ONE
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{http}}://{{host}}/{{back}}/api/v1/grupos/1
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{jwt}}
+}

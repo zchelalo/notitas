@@ -1,0 +1,12 @@
+[submodule "notitas_db"]
+	path = notitas_db
+	url = git@github.com:zchelalo/notitas_db.git
+[submodule "notitas_email"]
+	path = notitas_email
+	url = git@github.com:zchelalo/notitas_email.git
+[submodule "notitas_back"]
+	path = notitas_back
+	url = git@github.com:zchelalo/notitas_back.git
+[submodule "notitas_auth"]
+	path = notitas_auth
+	url = git@github.com:zchelalo/notitas_auth.git

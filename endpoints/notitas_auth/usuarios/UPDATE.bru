@@ -1,0 +1,23 @@
+meta {
+  name: UPDATE
+  type: http
+  seq: 4
+}
+
+patch {
+  url: {{http}}://{{host}}/{{auth}}/api/v1/usuarios/1
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{jwt}}
+}
+
+body:json {
+  {
+    "nombre": "Chelalo",
+    "correo": "eduardosaavedra687@gmail.com",
+    "tipoUsuarioId": 1
+  }
+}
