@@ -1,0 +1,23 @@
+meta {
+  name: INVITAR_USUARIO
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{http}}://{{host}}/{{back}}/api/v1/miembros_grupo/invitar
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{jwt}}
+}
+
+body:json {
+  {
+    "grupo_id": 2,
+    "correo": "erick@gmail.com",
+    "rol_grupo_id": 4
+  }
+}

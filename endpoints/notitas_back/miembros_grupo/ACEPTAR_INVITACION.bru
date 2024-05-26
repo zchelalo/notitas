@@ -1,0 +1,21 @@
+meta {
+  name: ACEPTAR_INVITACION
+  type: http
+  seq: 5
+}
+
+post {
+  url: {{http}}://{{host}}/{{back}}/api/v1/miembros_grupo/aceptar
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{jwt}}
+}
+
+body:json {
+  {
+    "token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjMsImdydXBvX2lkIjoyLCJyb2xfZ3J1cG9faWQiOjQsImV4cCI6MTcxNjcxNzAwN30.hE8-6Khfcw-CSOU-K5YGVrTBjf9lhR7PCDK9Vil1r2vdqq5_4Ee0rW_8jYzsDSDZfq-ImK0AcMyJO5FYSG26r83HPsUWkLeuBvOdPCMCXyyM7pHxoKkZxfP5gOoL_Lx14a91pkgCakXfzycL5q-3oUqp-LMMtaQWHgNARM-WDvT74C4oW6jjiS72lTMvHW5RhVVLIuz2bj2q0_RFilw2eC0wudJ4tnbWFq9c5zNAZ-SIBpRtK5CQwZ-ZPKocbQeYt1lNihk1Dhb5X7zXJWpEKqJw6NKM2sJ5N36vS1WtG9Xr0M5RQnQP3pu_i9iJSmRvtWlTvDY88wL3jv3tA5iEzoRQ3-LQTLVWYlb6JLfXhDYKoBBoXlmwe2i1YaRUJyt47KLeS9IcbmCZfzy26mhMjUfWre8Fswaqt87uRG7mSbTNZ9snKFL4SSAhkafro7F-UEOIw95JBx8iA5lNrbdeXmQHZHEfg3SRm-HJS3zjauKQPOWFv8imS5XuOl-YU0AF"
+  }
+}
