@@ -1,0 +1,24 @@
+meta {
+  name: CREATE_NOTITA_USUARIO
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{http}}://{{host}}/{{back}}/api/v1/notitas/usuarios
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{jwt}}
+}
+
+body:json {
+  {
+    "titulo": "Notita 1",
+    "nota": "Esto es una nota de prueba 1 de otro usuario",
+    "color": "rgba(0, 0, 0, 0.7)",
+    "privada": false
+  }
+}
