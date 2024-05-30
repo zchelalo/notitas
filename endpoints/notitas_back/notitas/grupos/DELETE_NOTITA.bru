@@ -1,0 +1,15 @@
+meta {
+  name: DELETE_NOTITA
+  type: http
+  seq: 5
+}
+
+delete {
+  url: {{http}}://{{host}}/{{back}}/api/v1/notitas/grupos/1/1
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{jwt}}
+}

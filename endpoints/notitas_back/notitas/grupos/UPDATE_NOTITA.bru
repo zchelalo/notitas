@@ -1,0 +1,22 @@
+meta {
+  name: UPDATE_NOTITA
+  type: http
+  seq: 4
+}
+
+put {
+  url: {{http}}://{{host}}/{{back}}/api/v1/notitas/grupos/1/1
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{jwt}}
+}
+
+body:json {
+  {
+    "titulo": "Notita 1",
+    "nota": "Esto es una nota de prueba grupal 1"
+  }
+}
