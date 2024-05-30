@@ -1,0 +1,15 @@
+meta {
+  name: GET_NOTITAS
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{http}}://{{host}}/{{back}}/api/v1/notitas/grupos/1
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{jwt}}
+}

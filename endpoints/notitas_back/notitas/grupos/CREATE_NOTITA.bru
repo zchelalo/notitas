@@ -1,0 +1,24 @@
+meta {
+  name: CREATE_NOTITA
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{http}}://{{host}}/{{back}}/api/v1/notitas/grupos/1
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{jwt}}
+}
+
+body:json {
+  {
+    "titulo": "Notita 3",
+    "nota": "Esto es una nota de prueba grupal 3",
+    "color": "rgba(0, 0, 0, 0.4)",
+    "privada": false
+  }
+}
