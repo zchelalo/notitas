@@ -5,14 +5,13 @@ meta {
 }
 
 get {
-  url: {{http}}://{{host}}/{{back}}/api/v1/miembros_grupo
+  url: {{http}}://{{host}}/{{back}}/api/v1/miembros_grupo?grupo_id=2
   body: none
   auth: bearer
 }
 
 query {
-  ~grupo_id: 2
-  ~usuario_id: 1
+  grupo_id: 2
 }
 
 auth:bearer {
