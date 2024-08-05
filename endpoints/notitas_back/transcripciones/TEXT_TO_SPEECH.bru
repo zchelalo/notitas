@@ -1,0 +1,21 @@
+meta {
+  name: TEXT_TO_SPEECH
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{http}}://{{host}}/{{back}}/api/v1/text_to_speech
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{jwt}}
+}
+
+body:json {
+  {
+    "texto": "Probando"
+  }
+}
